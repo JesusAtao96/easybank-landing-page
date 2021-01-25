@@ -1,6 +1,16 @@
+// Base
 @import "base";
-@import "typography";
 @import "animations";
 
+// Components
+@import "item";
+@import "button";
+@import "post";
+
+// Sections
 @import "header";
+@import "next";
+@import "image-pattern";
+@import "why";
+@import "article";
 @import "footer";

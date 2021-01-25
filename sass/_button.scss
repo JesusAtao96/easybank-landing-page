@@ -1,0 +1,17 @@
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: $white;
+    background-image: linear-gradient(120deg, $lime-green 0%, $bright-cyan 100%);
+    width: 165px;
+    text-align: center;
+    padding: 14px 0;
+    border-radius: 25px;
+    color: white;
+    font-size: .8rem;
+
+    &:hover {
+        background-image: linear-gradient(120deg , rgba($white, .4) 0%, rgba($white, .4) 100%),
+                            linear-gradient(120deg, #31d35c 0%, #2bb7da 100%);
+    }
+}

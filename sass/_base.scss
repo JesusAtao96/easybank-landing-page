@@ -14,11 +14,9 @@ $very-light-gray: hsl(0, 0%, 98%);
 $font-primary: 'Public Sans', sans-serif;
 
 // Responsive Breakpoints -> 1em = 16px
-$bp-large: 68.75em; // 1100px / 16px = 68.75
+$bp-large: 69.5em; // 1112px / 16px = 69.5
 $bp-medium: 50em; // 800px / 16px = 50
-$bp-small: 37.5em; // 600px / 16px = 37.5
-
-$max-width: 1100px;
+$bp-small: 39.375em; // 630px / 16px = 39.375
 
 *,
 *::before,
@@ -36,27 +34,42 @@ body {
 
 html {
     box-sizing: border-box;
-    font-size: 93.75%;  /* (15 / 16) * 100 = 93.75 -> 1rem = 15px */
+    font-size: 112.5%;  /* (18 / 16) * 100 = 112.5 -> 1rem = 18px */
+    letter-spacing: -0.2px;
 
     @media only screen and (max-width: $bp-large) {
-        font-size: 87.5%;
+        font-size: 109%;
     }
 
     @media only screen and (max-width: $bp-medium) {
-        font-size: 81.25%;
+        font-size: 104%;
     }
 
     @media only screen and (max-width: $bp-small) {
-        font-size: 75%;
+        font-size: 99%;
     }
 }
 
 body {
     font-family: $font-primary;
     font-size: 15px;
-    /* color: $dark-gray; */
+    color: $grayish-blue;
 
-    /* display: grid;
-    grid-template-rows: 650px repeat(3, min-content);
-    grid-template-columns: [full-start] 1fr [center-start] minmax(min-content, $max-width) [center-end] 1fr [full-end]; */
+    display: grid;
+    grid-template-rows: 80px 656px repeat(3, min-content);
+    grid-template-columns: [full-start] 1fr [center-start] minmax(min-content, 556px) [in-middle] minmax(min-content, 556px) [center-end] 1fr [full-end];
+
+    @media only screen and (max-width: $bp-large) {
+        grid-template-columns: [full-start] 70px [center-start] 1fr [in-middle] 1fr [center-end] 70px [full-end];
+    }
+
+    @media only screen and (max-width: $bp-medium) {
+        grid-template-rows: 80px 400px repeat(3, min-content);
+        grid-template-columns: [full-start] 50px [center-start] 1fr [in-middle] 1fr [center-end] 50px [full-end];
+    }
+
+    @media only screen and (max-width: $bp-small) {
+        grid-template-rows: 65px 293px repeat(3, min-content);
+        grid-template-columns: [full-start] 20px [center-start] 1fr [in-middle] 1fr [center-end] 20px [full-end];
+    }
 }
